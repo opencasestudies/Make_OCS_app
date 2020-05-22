@@ -13,14 +13,14 @@ library(openintro)
 library(shinythemes)
 
 fluidPage(
-  theme = shinytheme("cerulean"),
+  #theme = shinytheme("cerulean"),
+  theme = shinytheme("darkly"),
   headerPanel("Create a Tutorial"),
   title = 'Download a PDF report',
   sidebarLayout(
     sidebarPanel(
       helpText(),
-      data(mammals),
-      fileInput("image", "Choose image files", multiple = TRUE),
+      fileInput("file", "Choose files", multiple = TRUE),
       textInput("logo", "Logo", "Logo_URL"),
       textInput("title", "Title", "Type Title text here"),
       textInput("header1", "Header1", "test"),

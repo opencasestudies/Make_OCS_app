@@ -43,7 +43,7 @@ Narrative text block example:
 knitr::include_graphics("input$image")
 ```
 
-```{r model, collapse=TRUE}
+```{r model, collapse=TRUE, eval = TRUE}
 library(openintro)
 data("mammals")
 options(digits = 4)
@@ -55,7 +55,7 @@ summary(fit)
 The fitting result is $BodyWt = `r b[1]` + `r b[2]``r input$x`$.
 Below is a scatter plot with the regression line.
 
-```{r plot, fig.height=5}
+```{r plot, fig.height=5, eval =FALSE}
 par(mar = c(4, 4, 1, 1))
 plot(regFormula(), data = mammals, pch = 19, col = 'gray')
 abline(fit, col = 'red', lwd = 2)

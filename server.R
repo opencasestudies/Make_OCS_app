@@ -5,8 +5,8 @@
 
 function(input, output) {
   
-  output$value <-renderImage({ input$image
- })
+ output$value <-renderImage({input$image
+  })
  
  output$value <- renderText({ input$logo
  })
@@ -18,6 +18,7 @@ function(input, output) {
   })
   
   data("mammals")
+  
   regFormula <- reactive({
     as.formula(paste('BodyWt ~', input$x))
   })
