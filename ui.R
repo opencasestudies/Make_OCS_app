@@ -19,20 +19,17 @@ fluidPage(
   sidebarLayout(
     sidebarPanel(
       helpText(),
-      textInput("logo", "Logo", "Logo_URL"),
+      textInput("logo", "Type Image URL", "https://opencasestudies.github.io/img/logo.jpg"),
       textInput("title", "Title", "Type Title text here"),
       radioButtons('format', 'Document format', c('PDF', 'HTML', 'Word'),
                    inline = TRUE),
       downloadButton('downloadReport'),
       h6( "Powered by:"),
-     tags$img(src= 'Rstudio-ball.jpeg',height =50, width = 50)
+     tags$img(src= 'RStudio-Ball.png',height =50, width = 50)
     ),
     mainPanel(
-   #   plotOutput('regPlot'),
-     # selectInput('x', 'Build a regression model of Body weight against:',
-      #            choices = names(mammals)[-2]),
       fileInput("data", "Choose data files", multiple = TRUE),
-      fileInput("image", "Choose image files", multiple = TRUE),
+      textInput("image", "Type Image URL", "https://www.searchdiscovery.com/wp-content/uploads/2019/07/cropped-Asset-2-768x112.png"),
       textInput("header1", "Header1", "Header 1"),
       textInput("header2", "Header2", "Header 2"),
       textInput("narrative1", "Narrative Text", "Type narrative text here"),

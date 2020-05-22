@@ -13,21 +13,12 @@ output:
 
 <style>
 #TOC {
-  background: url("https://opencasestudies.github.io/img/logo.jpg");
+  background: url("`r input$logo`");
   background-size: contain;
   padding-top: 240px !important;
   background-repeat: no-repeat;
 }
 </style>
-
-<!-- <style> -->
-<!-- #TOC { -->
-<!--   background: url("`r input$Logo_URL`"); -->
-<!--   background-size: contain; -->
-<!--   padding-top: 240px !important; -->
-<!--   background-repeat: no-repeat; -->
-<!-- } -->
-<!-- </style> -->
 
 
 ## `r input$header1`
@@ -37,7 +28,13 @@ Narrative text block example:
 
 `r input$narrative1`
 
-`r input$image`
+`r input$logo`
+<p align="center">
+  <img width="500" src="`r input$image`">
+</p>
+
+#### source:`r input$image`
+
 
 ***
 

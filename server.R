@@ -1,11 +1,8 @@
 
 
-
-
-
 function(input, output) {
   
- output$value <-renderImage({input$image
+ output$value <-renderText({input$image
   })
  
  output$value <- renderText({ input$logo
@@ -22,19 +19,6 @@ function(input, output) {
   output$value <- renderText({ input$narrative1
   })
   
-  data("mammals")
-  
-  regFormula <- reactive({
-    as.formula(paste('BodyWt ~', input$x))
-  })
-
-
-
-  
-  output$regPlot <- renderPlot({
-    par(mar = c(4, 4, .1, .1))
-    plot(regFormula(), data = mammals, pch = 19)
-  })
   
   output$downloadReport <- downloadHandler(
     filename = function() {
