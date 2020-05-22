@@ -27,6 +27,7 @@ fluidPage(
     ),
     mainPanel(
       plotOutput('regPlot'),
+      fileInput("data", "Choose data files", multiple = TRUE),
       fileInput("image", "Choose image files", multiple = TRUE),
       textInput("header1", "Header1", "test"),
       selectInput('x', 'Build a regression model of Body weight against:',
