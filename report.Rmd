@@ -1,0 +1,63 @@
+---
+title: "Open Case Studies: `r input$title` "
+output:
+  html_document:
+    self_contained: yes
+    code_download: yes
+    highlight: tango
+    number_sections: no
+    theme: cosmo
+    toc: yes
+    toc_float: yes
+---
+
+<style>
+#TOC {
+  background: url("https://opencasestudies.github.io/img/logo.jpg");
+  background-size: contain;
+  padding-top: 240px !important;
+  background-repeat: no-repeat;
+}
+</style>
+
+<!-- <style> -->
+<!-- #TOC { -->
+<!--   background: url("`r input$Logo_URL`"); -->
+<!--   background-size: contain; -->
+<!--   padding-top: 240px !important; -->
+<!--   background-repeat: no-repeat; -->
+<!-- } -->
+<!-- </style> -->
+
+
+## `r input$header1`
+
+Narrative text block example:
+
+
+`r input$narrative1`
+
+`r input$image`
+
+```{r, echo = FALSE, out.width = "800 px", eval = FALSE}
+knitr::include_graphics("input$image")
+```
+
+```{r model, collapse=TRUE}
+library(openintro)
+data("mammals")
+options(digits = 4)
+fit <- lm(regFormula(), data = mammals)
+b   <- coef(fit)
+summary(fit)
+```
+
+The fitting result is $BodyWt = `r b[1]` + `r b[2]``r input$x`$.
+Below is a scatter plot with the regression line.
+
+```{r plot, fig.height=5}
+par(mar = c(4, 4, 1, 1))
+plot(regFormula(), data = mammals, pch = 19, col = 'gray')
+abline(fit, col = 'red', lwd = 2)
+```
+
