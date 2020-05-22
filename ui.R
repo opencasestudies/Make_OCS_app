@@ -29,11 +29,16 @@ fluidPage(
     ),
     mainPanel(
       fileInput("data", "Choose data files", multiple = TRUE),
-      textInput("image", "Type Image URL", "https://www.searchdiscovery.com/wp-content/uploads/2019/07/cropped-Asset-2-768x112.png"),
+      textInput("mainimage", "Type Image URL", "https://www.searchdiscovery.com/wp-content/uploads/2019/07/cropped-Asset-2-768x112.png"),
+  
       textInput("header1", "Header1", "Header 1"),
+      textInput("narrative1", "Narrative Text Section 1", "Type narrative text here"),
+      textInput("image1", "Type Image URL", "https://www.searchdiscovery.com/wp-content/uploads/2019/07/cropped-Asset-2-768x112.png"),
+      
       textInput("header2", "Header2", "Header 2"),
-      textInput("narrative1", "Narrative Text", "Type narrative text here"),
-      verbatimTextOutput("value")
+      textInput("narrative2", "Narrative Text Section 2", "Type narrative text here"),
+      textInput("image2", "Type Image URL", "https://www.searchdiscovery.com/wp-content/uploads/2019/07/cropped-Asset-2-768x112.png")
+      
     )
   )
 

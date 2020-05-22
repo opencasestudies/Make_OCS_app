@@ -20,6 +20,10 @@ output:
 }
 </style>
 
+<p align="center">
+  <img width="500" src="`r input$mainimage`">
+</p>
+
 
 ## `r input$header1`
 
@@ -28,16 +32,22 @@ Narrative text block example:
 
 `r input$narrative1`
 
-`r input$logo`
+
 <p align="center">
-  <img width="500" src="`r input$image`">
+  <img width="500" src="`r input$image1`">
 </p>
 
-#### source:`r input$image`
+#### source:`r input$image1`
 
 
 ***
 
 ## `r input$header2`
 
+`r input$narrative2`
 
+<p align="center">
+  <img width="500" src="`r input$image2`">
+</p>
+
+#### source:`r input$image2`

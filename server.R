@@ -2,7 +2,7 @@
 
 function(input, output) {
   
- output$value <-renderText({input$image
+ output$value <-renderText({input$mainimage
   })
  
  output$value <- renderText({ input$logo
@@ -14,11 +14,21 @@ function(input, output) {
   output$value <- renderText({ input$header1
   })
   
-  output$value <- renderText({ input$header2
-  })
   output$value <- renderText({ input$narrative1
   })
   
+  output$value <-renderText({input$image1
+  })
+  
+  output$value <- renderText({ input$header2
+  })
+  
+  
+  output$value <- renderText({ input$narrative2
+  })
+  
+  output$value <-renderText({input$image2
+  })
   
   output$downloadReport <- downloadHandler(
     filename = function() {
