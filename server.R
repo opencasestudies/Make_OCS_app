@@ -17,14 +17,19 @@ function(input, output) {
   output$value <- renderText({ input$header1
   })
   
+  output$value <- renderText({ input$header2
+  })
+  output$value <- renderText({ input$narrative1
+  })
+  
   data("mammals")
   
   regFormula <- reactive({
     as.formula(paste('BodyWt ~', input$x))
   })
 
-  output$value <- renderText({ input$narrative1
-  })
+
+
   
   output$regPlot <- renderPlot({
     par(mar = c(4, 4, .1, .1))

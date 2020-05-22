@@ -23,15 +23,18 @@ fluidPage(
       textInput("title", "Title", "Type Title text here"),
       radioButtons('format', 'Document format', c('PDF', 'HTML', 'Word'),
                    inline = TRUE),
-      downloadButton('downloadReport')
+      downloadButton('downloadReport'),
+      h6( "Powered by:"),
+     tags$img(src= 'Rstudio-ball.jpeg',height =50, width = 50)
     ),
     mainPanel(
-      plotOutput('regPlot'),
+   #   plotOutput('regPlot'),
+     # selectInput('x', 'Build a regression model of Body weight against:',
+      #            choices = names(mammals)[-2]),
       fileInput("data", "Choose data files", multiple = TRUE),
       fileInput("image", "Choose image files", multiple = TRUE),
-      textInput("header1", "Header1", "test"),
-      selectInput('x', 'Build a regression model of Body weight against:',
-                  choices = names(mammals)[-2]),
+      textInput("header1", "Header1", "Header 1"),
+      textInput("header2", "Header2", "Header 2"),
       textInput("narrative1", "Narrative Text", "Type narrative text here"),
       verbatimTextOutput("value")
     )
