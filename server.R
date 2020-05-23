@@ -30,6 +30,9 @@ function(input, output) {
   output$value <-renderText({input$image2
   })
   
+  output$value <-renderText({input$video
+  })
+  
   output$downloadReport <- downloadHandler(
     filename = function() {
       paste('my-report', sep = '.', switch(

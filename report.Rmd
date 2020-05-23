@@ -1,7 +1,10 @@
 ---
 title: "Open Case Studies: `r input$title` "
 output:
+#   learnr::tutorial:
+#     allow_skip: true
   html_document:
+    runtime: shiny_prerendered
     self_contained: yes
     code_download: yes
     highlight: tango
@@ -9,7 +12,11 @@ output:
     theme: cosmo
     toc: yes
     toc_float: yes
+
+
 ---
+
+
 
 <style>
 #TOC {
@@ -51,3 +58,20 @@ Narrative text block example:
 </p>
 
 #### source:`r input$image2`
+
+***
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/`r input$video`" frameborder="0" allowfullscreen></iframe>
+
+
+## Quiz
+
+```{r letter-a, echo=FALSE}
+# library(learnr)
+# question("What number is the letter A in the English alphabet?",
+#   answer("8"),
+#   answer("14"),
+#   answer("1", correct = TRUE),
+#   answer("23")
+# )
+```
