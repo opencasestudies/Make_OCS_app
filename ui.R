@@ -20,7 +20,7 @@ fluidPage(
     sidebarPanel(
       helpText(),
       textInput("logo", "Type Image URL", "https://opencasestudies.github.io/img/logo.jpg"),
-      textInput("title", "Title", "Type Title text here"),
+      textInput("title", "Title", "Gram Negative Vs Gram Positive Bacteria"),
       radioButtons('format', 'Document format', c('PDF', 'HTML', 'Word'),
                    inline = TRUE),
       downloadButton('downloadReport'),
@@ -29,17 +29,34 @@ fluidPage(
     ),
     mainPanel(
       fileInput("data", "Choose data files", multiple = TRUE),
-      textInput("mainimage", "Type Image URL", "https://www.searchdiscovery.com/wp-content/uploads/2019/07/cropped-Asset-2-768x112.png"),
+      textInput("mainimage", "Type Main Image URL", "https://thisonevsthatone.com/wp-content/uploads/Gram-positive-vs-Gram-negative.webp"),
   
-      textInput("header1", "Header1", "Header 1"),
-      textInput("narrative1", "Narrative Text Section 1", "Type narrative text here"),
-      textInput("image1", "Type Image URL", "https://www.searchdiscovery.com/wp-content/uploads/2019/07/cropped-Asset-2-768x112.png"),
+      textInput("header1", "Header1", "Gram-positive vs Gram-negative, what’s the difference??"),
+      textInput("narrative1", "Narrative Text Section 1", "Gram-positive is a type of bacteria that have a thick, multilayered cell wall and no outer cell membrane. They stain purple when you perform a Gram stain on them.
+
+Gram-negative is a type of bacteria that have a thin, single-layered cell wall and do have an outer cell membrane. They stain red or pink when you perform a Gram stain on them.
+
+One way to help distinguish between the two different types is to associate the beginning letters of the words with a corresponding color attribute.
+
+So gram-positive bacteria stain purple, and gram-negative bacteria do not.
+"),
+      textInput("image1", "Type Image 1 URL", "https://cdn1.byjus.com/wp-content/uploads/2018/11/biology/2018/05/16065016/Difference-between-Gram-positive-and-Gram-negative-Bacteria.png"),
       
-      textInput("header2", "Header2", "Header 2"),
-      textInput("narrative2", "Narrative Text Section 2", "Type narrative text here"),
-      textInput("image2", "Type Image URL", "https://www.searchdiscovery.com/wp-content/uploads/2019/07/cropped-Asset-2-768x112.png"),
+      textInput("header2", "Header2", "Gram Stain Method"),
+      textInput("narrative2", "Narrative Text Section 2", "During Gram staining both bacteria are stained with a purple dye, but the gram-negative does not retain it. So, you could also associate that concept to their names as well.
+
+So gram-positive (plus) bacteria have the purple stain, and gram-negative bacteria (minus) do not have the purple stain.
+
+Of course, there is much more to these two bacterial types than that, so let’s delve a bit deeper into both types.
+
+
+Gram staining was invented by Hans Christian Gram, and it’s sometimes referred to as Gram’s method. This process is where gram-positive and gram-negative bacteria derived their names. Since bacteria are so tiny, Gram staining is used to determine the bacterial type (positive or negative).
+
+This is incredibly important for treating ailments caused by bacteria. Different bacterial types react in different ways to different treatments, so we need to know the bacterial type to be able to know the best treatment option.
+"),
+      textInput("image2", "Type Image 2 URL", "https://cdn.technologynetworks.com/tn/images/body/g-pos-g-neg-cell-wall-structure-final1566305996142.jpg"),
       
-      textInput("video", "Type Image URL", "AZS2wb7pMo4")
+      textInput("video", "Type youtube video code", "AZS2wb7pMo4")
       
     )
   )
