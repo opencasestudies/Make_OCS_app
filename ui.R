@@ -15,13 +15,15 @@ library(shinythemes)
 fluidPage(
   #theme = shinytheme("cerulean"),
   theme = shinytheme("darkly"),
-  headerPanel("Create a Tutorial"),
+  headerPanel("Create an Online Lesson"),
   sidebarLayout(
     sidebarPanel(
       helpText(),
       textInput("logo", "Type Image URL", "https://opencasestudies.github.io/img/logo.jpg"),
       textInput("title", "Title", "Gram Negative Vs Gram Positive Bacteria"),
-      radioButtons('format', 'Document format', c('PDF', 'HTML', 'Word'),
+     # radioButtons('format', 'Document format', c('PDF', 'HTML', 'Word'),
+      #             inline = TRUE),
+      radioButtons('format', 'Document format', c('HTML'),
                    inline = TRUE),
       downloadButton('downloadReport'),
       h6( "Powered by:"),
