@@ -1,0 +1,12 @@
+name: OCS_make_app
+title: OCS_make_app
+username:
+account: mbreshock
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3893499
+bundleId: 4443445
+url: https://mbreshock.shinyapps.io/OCS_make_app/
+when: 1617824576.79557
+asMultiple: FALSE
+asStatic: FALSE
