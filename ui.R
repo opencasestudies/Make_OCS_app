@@ -11,29 +11,41 @@
 library(shiny)
 library(openintro)
 library(shinythemes)
+library(shinyalert)
 
 fluidPage(
   #theme = shinytheme("cerulean"),
+  useShinyalert(),
   theme = shinytheme("flatly"),
   headerPanel("Create an Online Case Study"),
   sidebarLayout(
     sidebarPanel(
-      helpText(),
+      helpText("This tool is provided to help users create online lessons", em(strong("quickly and easily")), "like our", 
+               tags$a(href="https://www.opencasestudies.org/", "open case studies"), 
+               ", which are online step-by-step lessons that guide users through a", 
+               strong("real-world problem solving challenge"), "."),
+      tags$hr(),
       textInput("logo", "Logo URL", "https://opencasestudies.github.io/img/logo.jpg", width = '400px'),
       textInput("title", "Title", "Gram Negative Vs Gram Positive Bacteria", width = '400px'),
-      radioButtons('format', 'Document format', c('PDF', 'HTML', 'Word'),
+      actionButton('insertHeader', 'Insert Header'),
+      actionButton('removeHeader', 'Remove Header'),
+      actionButton('insertNarrative', 'Insert Narrative Section'),
+      actionButton('removeNarrative', 'Remove Narrative Section'),
+      actionButton('insertImage', 'Insert Image URL'),
+      actionButton('removeImage', 'Remove Image URL'),
+      tags$hr(),
+      radioButtons('format', 'Document format', c('HTML', 'PDF', 'Word'),
                    inline = TRUE),
-      h1('_______________'),
-      h5('All done? Click here!'),
-      downloadButton('downloadReport','Compile and Download!'),
-      h6('Format: HTML'),
-      h6('Hosted by:'),
-     tags$a(href='https://www.opencasestudies.org/','Open Case Studies',target='_blank'),
-     ## <a href="https://www.opencasestudies.org/">Open Case Studies/a> 
+      helpText("Start by clicking the", strong("Make Case Study"), "button to download an example lesson.", style="color:#FF7F50"),
+      downloadButton('downloadReport','Make Case Study'),
       h6( "Powered by:"),
-     tags$img(src= 'RStudio-Ball.png',height =50, width = 50)
+      tags$a(href="https://www.r-project.org/", tags$img(src= 'Rlogo.png'))
     ),
     mainPanel(
+      tags$img(src= 'sam_comp.jpg', height = 200),
+      tags$h6("Photo by", tags$a(href="https://unsplash.com/@samich_18?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText", "Samantha Borges on unsplash")),
+      #fileInput("data", "Choose data files", multiple = TRUE),
+      # tags$div(id = 'placeholder'),
       textInput("mainimage", "Main Image URL", "https://thisonevsthatone.com/wp-content/uploads/Gram-positive-vs-Gram-negative.webp", width = '400px'),
   
       textInput("header1", "Header 1", "Gram-positive vs Gram-negative, what’s the difference??", width='400px'),
@@ -60,8 +72,8 @@ Gram staining was invented by Hans Christian Gram, and it’s sometimes referred
 This is incredibly important for treating ailments caused by bacteria. Different bacterial types react in different ways to different treatments, so we need to know the bacterial type to be able to know the best treatment option.
 ", width='600px',height='400px'),
       textInput("image2", "Image 2 URL", "https://cdn.technologynetworks.com/tn/images/body/g-pos-g-neg-cell-wall-structure-final1566305996142.jpg", width='400px'),
-      
-      textInput("video", "Youtube Video Code", "AZS2wb7pMo4")
+      tags$div(id = 'placeholder'),
+      textInput("video", "Youtube Video Code", "AZS2wb7pMo4", width = '400px')
       
     )
   )
