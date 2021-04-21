@@ -1,0 +1,12 @@
+name: MB_make_app
+title: MB_make_app
+username:
+account: mbreshock
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4010146
+bundleId: 4502398
+url: https://mbreshock.shinyapps.io/MB_make_app/
+when: 1619047322.31019
+asMultiple: FALSE
+asStatic: FALSE
