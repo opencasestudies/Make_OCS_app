@@ -5,8 +5,8 @@ account: mbreshock
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 4010146
-bundleId: 4502398
+bundleId: 4502447
 url: https://mbreshock.shinyapps.io/MB_make_app/
-when: 1619047322.31019
+when: 1619048728.99672
 asMultiple: FALSE
 asStatic: FALSE
