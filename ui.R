@@ -33,14 +33,15 @@ fluidPage(
       actionButton('removeNarrative', 'Remove Narrative Section'),
       actionButton('insertImage', 'Insert Image URL'),
       actionButton('removeImage', 'Remove Image URL'),
-      tags$hr(),
-      radioButtons('format', 'Document format', c('HTML', 'PDF', 'Word'),
-                   inline = TRUE),
+      # tags$hr(),
+      # radioButtons('format', 'Document format', c('HTML', 'PDF', 'Word'),
+      #             inline = TRUE),
       # radioButtons('format', 'Document format', c('HTML'),
       #             inline = TRUE),
+      tags$h2('-------------------'),
       helpText("Start by clicking the", strong("Make Case Study"), "button to download an example lesson.", style="color:#FF7F50"),
       downloadButton('downloadReport', label = 'Make Case Study'),
-      tags$hr(),
+      tags$h6('Document Format: HTML'),
       helpText("Delete and replace the existing content for your own content and press the",
                strong("Make Case Study"), "button again to download your own lesson!", style="color:#17bc9c"),
       tags$hr(),
@@ -51,7 +52,7 @@ fluidPage(
       tags$img(src= 'sam_comp.jpg', height = 200),
       tags$h6("Photo by", tags$a(href="https://unsplash.com/@samich_18?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText", "Samantha Borges on unsplash")),
       #fileInput("data", "Choose data files", multiple = TRUE),
-      tags$div(id = 'placeholder'),
+      # tags$div(id = 'placeholder'),
       textInput("mainimage", "Main Image URL", "https://thisonevsthatone.com/wp-content/uploads/Gram-positive-vs-Gram-negative.webp", width = '400px'),
   
       textInput("header1", "Header1", "Gram-positive vs Gram-negative, what’s the difference??", width = '400px'),
@@ -79,8 +80,8 @@ This is incredibly important for treating ailments caused by bacteria. Different
 ", width = '600px', height = '400px'),
       textInput("image2", "Image 2 URL", "https://cdn.technologynetworks.com/tn/images/body/g-pos-g-neg-cell-wall-structure-final1566305996142.jpg", width='400px'),
       
-      textInput("video", "youtube video code", "AZS2wb7pMo4", width='400px')
-      
+      textInput("video", "youtube video code", "AZS2wb7pMo4", width='400px'),
+      tags$div(id = 'placeholder')
     )
   )
 

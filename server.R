@@ -41,7 +41,6 @@ function(input, output) {
   output$value <- renderText({ input$header2
   })
   
-  
   output$value <- renderText({ input$narrative2
   })
   
@@ -114,9 +113,9 @@ function(input, output) {
   
   output$downloadReport <- downloadHandler(
     filename = function() {
-      paste('my-report', sep = '.', 'html'
+      paste('my-report', sep = '.', 'html')
           # switch(input$format, PDF = 'pdf', HTML = 'html', Word = 'docx'
-      )
+      # )
     },
     
     content = function(file) {

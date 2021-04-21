@@ -34,8 +34,6 @@ output:
 
 ## `r input$header1`
 
-Narrative text block example:
-
 
 `r input$narrative1`
 
