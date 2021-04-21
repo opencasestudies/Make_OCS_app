@@ -61,16 +61,16 @@ Narrative text block example:
 
 ***
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/`r input$video`" frameborder="0" allowfullscreen></iframe>
+<p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/`r input$video`" frameborder="0" allowfullscreen></iframe> </p>
 
 
 
 ```{r letter-a, echo=FALSE}
-# library(learnr)
-# question("What number is the letter A in the English alphabet?",
-#   answer("8"),
-#   answer("14"),
-#   answer("1", correct = TRUE),
-#   answer("23")
-# )
+ # library(learnr)
+ # question("What number is the letter A in the English alphabet?",
+ #   answer("8"),
+ #   answer("14"),
+ #   answer("1", correct = TRUE),
+ #   answer("23")
+ # )
 ```
