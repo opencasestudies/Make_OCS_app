@@ -111,6 +111,13 @@ function(input, output) {
     insertedImage <<- insertedImage[-length(insertedImage)]
   })
   
+  getPage <- function() {
+    library(rmarkdown)
+    render('report.Rmd', 'html_document')
+    return(includeHTML('report.html'))
+  }
+  output$htmlview <- renderUI({getPage()})
+  
   output$downloadReport <- downloadHandler(
     filename = function() {
       paste('my-report', sep = '.', 'html')

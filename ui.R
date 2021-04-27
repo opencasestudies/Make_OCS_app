@@ -49,14 +49,16 @@ fluidPage(
       tags$a(href="https://www.r-project.org/", tags$img(src= 'Rlogo.png'))
     ),
     mainPanel(
-      tags$img(src= 'sam_comp.jpg', height = 200),
-      tags$h6("Photo by", tags$a(href="https://unsplash.com/@samich_18?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText", "Samantha Borges on unsplash")),
-      #fileInput("data", "Choose data files", multiple = TRUE),
-      # tags$div(id = 'placeholder'),
-      textInput("mainimage", "Main Image URL", "https://thisonevsthatone.com/wp-content/uploads/Gram-positive-vs-Gram-negative.webp", width = '400px'),
-  
-      textInput("header1", "Header1", "Gram-positive vs Gram-negative, what’s the difference??", width = '400px'),
-      textAreaInput("narrative1", "Narrative Text Section 1", "Gram-positive is a type of bacteria that have a thick, multilayered cell wall and no outer cell membrane. They stain purple when you perform a Gram stain on them.
+      tabsetPanel(
+        tabPanel("Create",
+                 tags$img(src= 'sam_comp.jpg', height = 200),
+                 tags$h6("Photo by", tags$a(href="https://unsplash.com/@samich_18?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText", "Samantha Borges on unsplash")),
+                 #fileInput("data", "Choose data files", multiple = TRUE),
+                 # tags$div(id = 'placeholder'),
+                 textInput("mainimage", "Main Image URL", "https://thisonevsthatone.com/wp-content/uploads/Gram-positive-vs-Gram-negative.webp", width = '400px'),
+                 
+                 textInput("header1", "Header1", "Gram-positive vs Gram-negative, what’s the difference??", width = '400px'),
+                 textAreaInput("narrative1", "Narrative Text Section 1", "Gram-positive is a type of bacteria that have a thick, multilayered cell wall and no outer cell membrane. They stain purple when you perform a Gram stain on them.
 
 Gram-negative is a type of bacteria that have a thin, single-layered cell wall and do have an outer cell membrane. They stain red or pink when you perform a Gram stain on them.
 
@@ -64,10 +66,10 @@ One way to help distinguish between the two different types is to associate the 
 
 So gram-positive bacteria stain purple, and gram-negative bacteria do not.
 ", width = '600px', height = '400px'),
-      textInput("image1", "Image 1 URL", "https://cdn1.byjus.com/wp-content/uploads/2018/11/biology/2018/05/16065016/Difference-between-Gram-positive-and-Gram-negative-Bacteria.png", width='400px'),
-      
-      textInput("header2", "Header2", "Gram Stain Method", width='400px'),
-      textAreaInput("narrative2", "Narrative Text Section 2", "During Gram staining both bacteria are stained with a purple dye, but the gram-negative does not retain it. So, you could also associate that concept to their names as well.
+                 textInput("image1", "Image 1 URL", "https://cdn1.byjus.com/wp-content/uploads/2018/11/biology/2018/05/16065016/Difference-between-Gram-positive-and-Gram-negative-Bacteria.png", width='400px'),
+                 
+                 textInput("header2", "Header2", "Gram Stain Method", width='400px'),
+                 textAreaInput("narrative2", "Narrative Text Section 2", "During Gram staining both bacteria are stained with a purple dye, but the gram-negative does not retain it. So, you could also associate that concept to their names as well.
 
 So gram-positive (plus) bacteria have the purple stain, and gram-negative bacteria (minus) do not have the purple stain.
 
@@ -78,13 +80,15 @@ Gram staining was invented by Hans Christian Gram, and it’s sometimes referred
 
 This is incredibly important for treating ailments caused by bacteria. Different bacterial types react in different ways to different treatments, so we need to know the bacterial type to be able to know the best treatment option.
 ", width = '600px', height = '400px'),
-      textInput("image2", "Image 2 URL", "https://cdn.technologynetworks.com/tn/images/body/g-pos-g-neg-cell-wall-structure-final1566305996142.jpg", width='400px'),
-      
-      textInput("video", "youtube video code", "AZS2wb7pMo4", width='400px'),
-      tags$div(id = 'placeholder')
+                 textInput("image2", "Image 2 URL", "https://cdn.technologynetworks.com/tn/images/body/g-pos-g-neg-cell-wall-structure-final1566305996142.jpg", width='400px'),
+                 
+                 textInput("video", "youtube video code", "AZS2wb7pMo4", width='400px'),
+                 tags$div(id = 'placeholder')),
+        tabPanel("Preview", htmlOutput("htmlview"))
+                 
+      )
     )
   )
-
 )
 
 #for images: https://rstudio.github.io/shiny/tutorial/#sending-images
