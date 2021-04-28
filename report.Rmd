@@ -9,7 +9,7 @@ output:
     code_download: yes
     highlight: tango
     number_sections: no
-    theme: cosmo
+    theme: flatly
     toc: yes
     toc_float: yes
 
