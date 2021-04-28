@@ -18,8 +18,8 @@ fluidPage(
   useShinyalert(),
   theme = shinytheme("flatly"),
   headerPanel("Create an Online Case Study"),
-  sidebarLayout(
-    sidebarPanel(
+  fluidRow( # sidebarLayout(
+    column(12, # sidebarPanel(
       helpText("This tool is provided to help users create online lessons", em(strong("quickly and easily")), "like our", 
                tags$a(href="https://www.opencasestudies.org/", "open case studies"), 
                ", which are online step-by-step lessons that guide users through a", 
@@ -47,8 +47,9 @@ fluidPage(
       tags$hr(),
       tags$h6( "Powered by:"),
       tags$a(href="https://www.r-project.org/", tags$img(src= 'Rlogo.png'))
-    ),
-    mainPanel(
+    )),
+  fluidRow(
+    column(12,# mainPanel(
       tabsetPanel(
         tabPanel("Create",
                  tags$img(src= 'sam_comp.jpg', height = 200),
