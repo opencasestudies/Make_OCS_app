@@ -50,6 +50,9 @@ function(input, output) {
   output$value <-renderText({input$video
   })
   
+  output$value <-renderText({input$image3
+  })
+  
   insertedHeader <- c()
   insertedNarrative <- c()
   insertedImage <- c()
@@ -62,7 +65,7 @@ function(input, output) {
     input_label <- paste0('Header ', as.character(num))
     insertUI(
       selector = '#placeholder',
-      ui = textInput(id, input_label, width='350px')
+      ui = textInput(id, input_label, width='400px')
     )
     insertedHeader <<- c(id, insertedHeader)
   })
@@ -82,7 +85,7 @@ function(input, output) {
     input_label <- paste0('Narrative Text Section ', as.character(num))
     insertUI(
       selector = '#placeholder',
-      ui = textAreaInput(id, input_label, width='350px',height='400px')
+      ui = textAreaInput(id, input_label, width='600px',height='400px')
     )
     insertedNarrative <<- c(id, insertedNarrative)
   })
@@ -102,7 +105,9 @@ function(input, output) {
     input_label <- paste0('Image ', as.character(num), ' URL')
     insertUI(
       selector = '#placeholder',
-      ui = textInput(id, input_label, width='350px')
+      ui = textInput(id, input_label, 
+                     value = "https://png.pngitem.com/pimgs/s/518-5188542_polka-dot-hd-png-download.png", 
+                     width='400px')
     )
     insertedImage <<- c(id, insertedImage)
   })

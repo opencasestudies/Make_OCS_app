@@ -66,6 +66,12 @@ output:
 
 `r input$narrative3`
 
+<!-- <p align="center"> -->
+<!--   <img width="500" src="`r input$image3`"> -->
+<!-- </p> -->
+
+<!-- #### source: `r input$image3` -->
+
 ***
 
 

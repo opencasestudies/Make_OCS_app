@@ -1,0 +1,12 @@
+name: fluidcolumnAutoOCS
+title: fluidcolumnAutoOCS
+username:
+account: mbreshock
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4048905
+bundleId: 4532750
+url: https://mbreshock.shinyapps.io/fluidcolumnAutoOCS/
+when: 1619657697.77797
+asMultiple: FALSE
+asStatic: FALSE
