@@ -43,7 +43,7 @@ output:
   <img width="500" src="`r input$image1`">
 </p>
 
-#### source:`r input$image1`
+#### source: `r input$image1`
 
 
 ***
@@ -56,12 +56,17 @@ output:
   <img width="500" src="`r input$image2`">
 </p>
 
-#### source:`r input$image2`
-
-***
+#### source: `r input$image2`
 
 <p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/`r input$video`" frameborder="0" allowfullscreen></iframe> </p>
 
+***
+
+## `r input$header3`
+
+`r input$narrative3`
+
+***
 
 
 ```{r letter-a, echo=FALSE}

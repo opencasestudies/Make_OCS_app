@@ -55,13 +55,14 @@ function(input, output) {
   insertedImage <- c()
   
   observeEvent(input$insertHeader, {
-    btn <- input$insertHeader
-    id <- paste0('hdr', btn)
+    # btn <- input$insertHeader
+    # id <- paste0('hdr', btn)
     num <- 3 + length(insertedHeader)
+    id <- paste0('header',as.character(num))
     input_label <- paste0('Header ', as.character(num))
     insertUI(
       selector = '#placeholder',
-      ui = textInput(id, input_label, width='400px')
+      ui = textInput(id, input_label, width='350px')
     )
     insertedHeader <<- c(id, insertedHeader)
   })
@@ -74,13 +75,14 @@ function(input, output) {
   })
   
   observeEvent(input$insertNarrative, {
-    btn <- input$insertNarrative
-    id <- paste0('txt', btn)
+    # btn <- input$insertNarrative
+    # id <- paste0('txt', btn)
     num <- 3 + length(insertedNarrative)
+    id <- paste0('narrative', as.character(num))
     input_label <- paste0('Narrative Text Section ', as.character(num))
     insertUI(
       selector = '#placeholder',
-      ui = textAreaInput(id, input_label, width='600px',height='400px')
+      ui = textAreaInput(id, input_label, width='350px',height='400px')
     )
     insertedNarrative <<- c(id, insertedNarrative)
   })
@@ -93,13 +95,14 @@ function(input, output) {
   })
   
   observeEvent(input$insertImage, {
-    btn <- input$insertImage
-    id <- paste0('img', btn)
+    # btn <- input$insertImage
+    # id <- paste0('img', btn)
     num <- 3 + length(insertedImage)
+    id <- paste0('image', as.character(num))
     input_label <- paste0('Image ', as.character(num), ' URL')
     insertUI(
       selector = '#placeholder',
-      ui = textInput(id, input_label, width='400px')
+      ui = textInput(id, input_label, width='350px')
     )
     insertedImage <<- c(id, insertedImage)
   })
