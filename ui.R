@@ -39,7 +39,7 @@ fluidPage(
            helpText("This tool is provided to help users create online lessons", em(strong("quickly and easily")), "like our", 
                     tags$a(href="https://www.opencasestudies.org/", "open case studies"), 
                     ", which are online step-by-step lessons that guide users through a", 
-                    strong("real-world problem solving challenge"), "."),
+                    strong("real-world problem solving challenge"),"."),
            tags$h6( "Powered by:"),
            tags$a(href="https://www.r-project.org/", tags$img(src= 'Rlogo.png'))
            ),
@@ -59,7 +59,7 @@ fluidPage(
            helpText("Start by clicking the", strong("Make Case Study"), "button to download an example lesson.", style="color:#FF7F50"),
            downloadButton('downloadReport', label = 'Make Case Study'),
            tags$h6('Document Format: HTML'),
-           helpText("Delete and replace the existing content for your own content and press the",
+           helpText("Delete and replace the existing content within the Create tab for your own content, check the preview in the Preview tab, and finally press the",
                     strong("Make Case Study"), "button again to download your own lesson!", style="color:#17bc9c"),
            # tags$hr(),
            )
