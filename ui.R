@@ -45,9 +45,10 @@ fluidPage(
            ),
     column(4,
            tags$h3(''),
-           tags$img(src= 'sam_comp.jpg', width = 250),
-           tags$h6("Photo by", tags$a(href="https://unsplash.com/@samich_18?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText", "Samantha Borges on unsplash"))
+           tags$img(src= 'kari_shea.jpg', width = 250),
+           tags$h6("Photo by", tags$a(href="https://unsplash.com/@karishea?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText", "Kari Shea on Unsplash"))
            ),
+      
     # tags$hr(),
     # radioButtons('format', 'Document format', c('HTML', 'PDF', 'Word'),
     #             inline = TRUE),
