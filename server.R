@@ -4,23 +4,23 @@ function(input, output) {
   
  output$value <-renderText({input$mainimage
   })
- shinyalert(
-   title = "This tool helps make online lessons. Click the Make Case Study button to see an example.",
-   text = "You will need to check your downloads",
-   size = "s", 
-   closeOnEsc = FALSE,
-   closeOnClickOutside = FALSE,
-   html = FALSE,
-   type = "success",
-   showConfirmButton = TRUE,
-   showCancelButton = FALSE,
-   confirmButtonText = "OK",
-   confirmButtonCol = "#47AD84",
-   timer = 0,
-   imageUrl = "https://raw.githubusercontent.com/opencasestudies/opencasestudies.github.io/master/img/buttonbig.png",
-   # imageUrl = "https://opencasestudies.github.io/img/logo.jpg",
-   animation = TRUE
- )
+ # shinyalert(
+ #   title = "This tool helps make online lessons. Click the Make Case Study button to see an example.",
+ #   text = "You will need to check your downloads",
+ #   size = "s", 
+ #   closeOnEsc = FALSE,
+ #   closeOnClickOutside = FALSE,
+ #   html = FALSE,
+ #   type = "success",
+ #   showConfirmButton = TRUE,
+ #   showCancelButton = FALSE,
+ #   confirmButtonText = "OK",
+ #   confirmButtonCol = "#47AD84",
+ #   timer = 0,
+ #   imageUrl = "https://raw.githubusercontent.com/opencasestudies/opencasestudies.github.io/master/img/buttonbig.png",
+ #   # imageUrl = "https://opencasestudies.github.io/img/logo.jpg",
+ #   animation = TRUE
+ # )
  # createdusing Dean Attali's code https://daattali.com/shiny/shinyalert-demo/
  
   output$value <- renderText({ input$logo
