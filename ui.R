@@ -47,7 +47,7 @@ fluidPage(
     column(4,
            tags$h3(''),
            tags$img(src= 'kari_shea.jpg', width = 300, style="display: block; margin-left: auto; margin-right: auto;"),
-           tags$h6("Photo by", tags$a(href="https://unsplash.com/@karishea?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText", "Kari Shea on Unsplash"))
+           tags$h6("Photo by", tags$a(href="https://unsplash.com/@karishea?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText", "Kari Shea on Unsplash"), align="center"), 
            ),
       
     # tags$hr(),
