@@ -78,7 +78,7 @@ fluidPage(
                       # actionButton('insertImage', 'Insert Image URL'),
                       # actionButton('removeImage', 'Remove Image URL'),
                       fluidRow(column(12, h1(''))),
-                      textInput("logo", "Logo Image URL", "https://opencasestudies.github.io/img/logo.jpg", width = '400px'),
+                      textInput("logo", "Logo Image URL", "https://image.freepik.com/free-vector/biology-school-subject-concept_277904-8447.jpg", width = '400px'),
                       textInput("title", "Title", "Gram Negative Vs Gram Positive Bacteria", width = '400px'),
                       textInput("mainimage", "Main Image URL", "https://thisonevsthatone.com/wp-content/uploads/Gram-positive-vs-Gram-negative.webp", width = '400px'),
                       textInput("header1", "Header1", "Gram-positive vs Gram-negative, what’s the difference??", width = '400px'),
