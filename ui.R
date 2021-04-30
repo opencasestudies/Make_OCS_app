@@ -40,13 +40,13 @@ fluidPage(
            helpText("This tool is provided to help users create online lessons", em(strong("quickly and easily")), "like our", 
                     tags$a(href="https://www.opencasestudies.org/", "open case studies"), 
                     ", which are online step-by-step lessons that guide users through a", 
-                    strong("real-world problem solving challenge"),"."),
+                    strong("real-world problem solving challenge"),".", style = "font-size: 18px"),
            tags$h6( "Powered by:"),
            tags$a(href="https://www.r-project.org/", tags$img(src= 'Rlogo.png'))
            ),
     column(4,
            tags$h3(''),
-           tags$img(src= 'kari_shea.jpg', width = 250),
+           tags$img(src= 'kari_shea.jpg', width = 300, style="display: block; margin-left: auto; margin-right: auto;"),
            tags$h6("Photo by", tags$a(href="https://unsplash.com/@karishea?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText", "Kari Shea on Unsplash"))
            ),
       
@@ -57,11 +57,11 @@ fluidPage(
     #             inline = TRUE),
     # tags$h2('----------------------'),
     column(4,
-           helpText("Start by clicking the", strong("Make Case Study"), "button to download an example lesson.", style="color:#FF7F50"),
+           helpText("Start by clicking the", strong("Make Case Study"), "button to download an example lesson.", style="color:#FF7F50; font-size: 16px"),
            downloadButton('downloadReport', label = 'Make Case Study'),
            tags$h6('Document Format: HTML'),
            helpText("Delete and replace the existing content within the Create tab for your own content, check the preview in the Preview tab, and finally press the",
-                    strong("Make Case Study"), "button again to download your own lesson!", style="color:#17bc9c"),
+                    strong("Make Case Study"), "button again to download your own lesson!", style="color:#17bc9c; font-size: 16px"),
            # tags$hr(),
            )
     ),
