@@ -24,7 +24,7 @@ output:
   background-size: contain;
   padding-top: 240px !important;
   background-repeat: no-repeat;
-}
+  }
 </style>
 
 <p align="center">

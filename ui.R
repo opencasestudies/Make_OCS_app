@@ -33,7 +33,8 @@ fluidPage(
   #             }'),
 
   headerPanel("Create a Case Study"),
-  tags$head(tags$style('h1 {color:white;}')),
+  #tags$head(tags$style('h1 {color:white;}')),
+  fluidRow(id = 'sep', column(12, h1(''))),
   fluidRow(id = 'sep1', column(12, h1(''))),
   fluidRow(id = 'info', # sidebarLayout(
     column(4, # sidebarPanel(
