@@ -41,7 +41,8 @@ fluidPage(
            helpText("This tool is provided to help users create online lessons", em(strong("quickly and easily")), "like our", 
                     tags$a(href="https://www.opencasestudies.org/", "open case studies"), 
                     ", which are online step-by-step lessons that guide users through a", 
-                    strong("real-world problem solving challenge"),".", style = "font-size: 18px"),
+                    strong("real-world problem solving challenge."), style = "font-size: 18px"),
+           tags$h6(""),
            tags$h6( "Powered by:"),
            tags$a(href="https://www.r-project.org/", tags$img(src= 'Rlogo.png'))
            ),
