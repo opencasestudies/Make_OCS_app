@@ -1,1 +1,1 @@
-Prototype app to create online lessons hosted at: https://carriewright11.shinyapps.io/autoOCS/.
+Prototype app to create online lessons hosted at: https://rsconnect.biostat.jhsph.edu/MakeCaseStudies/.
